@@ -15,25 +15,5 @@
         <div class="avatar">Av</div>
     </div> -->
     <!-- ------------------------ -->
-    <script>
-        let data = {
-            id: 1,
-            name: 'mobile stand'
-        }
-        document.addEventListener('click', () => {
-
-            fetch('https://dever-c4afd-default-rtdb.firebaseio.com/users.json', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(res => console.log(res))
-            .catch(err => {
-                throw new Error(`"${err}" Fetching Failed!`)
-            })
-        })
-    </script>
 </body>
 </html>
