@@ -9,5 +9,23 @@
     <h1>
         Hello World!
     </h1>
+        <script>
+        document.addEventListener('click', () => {
+    fetch('https://dever-c4afd-default-rtdb.firebaseio.com/', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            id: 1,
+            name: 'mobile stand'
+        })
+    })
+    .then(res => console.log(res))
+    .catch(err => {
+        throw new Error(`"${err}" Fetching Failed!`)
+    })
+})
+    </script>
 </body>
 </html>
